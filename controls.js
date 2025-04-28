@@ -8,15 +8,6 @@ class Controls {
 		this.#addKeyboardListeners()
 	}
 
-	update() {
-		if (this.controls.forward) {
-			this.y -= 2
-		}
-		if (this.controls.reverse) {
-			this.y += 2
-		}
-	}
-
 	#addKeyboardListeners() {
 		document.onkeydown = event => {
 			switch (event.key) {
