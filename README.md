@@ -1,0 +1,1 @@
+custom AI written in plain JS
