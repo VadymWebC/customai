@@ -30,6 +30,9 @@ class Car {
 		if (this.speed > 0) {
 			this.speed -= this.friction
 		}
+		if (this.speed < 0) {
+			this.speed += this.friction
+		}
 
 		this.y -= this.speed
 	}
