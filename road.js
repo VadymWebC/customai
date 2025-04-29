@@ -23,14 +23,5 @@ class Road {
 			ctx.lineTo(x, this.bottom)
 			ctx.stroke()
 		}
-
-		// ctx.beginPath()
-		// ctx.moveTo(this.right, this.top)
-		// ctx.lineTo(this.right, this.bottom)
-		// ctx.stroke()
 	}
-}
-
-function lerp(A, B, t) {
-	return A + (B - A) * t
 }
