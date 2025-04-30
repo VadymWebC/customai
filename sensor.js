@@ -26,4 +26,12 @@ class Sensor {
 			this.rays.push([start, end])
 		}
 	}
+
+	draw(ctx) {
+		for (let i = 0; i < this.rayCount; i++) {
+			ctx.beginPath()
+			ctx.lineWidth = 2
+			//
+		}
+	}
 }
