@@ -66,5 +66,6 @@ class Car {
 		ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height)
 		ctx.fill()
 		ctx.restore()
+		this.sensor.draw(ctx)
 	}
 }
