@@ -13,7 +13,7 @@ class Sensor {
 		this.#castRays()
 		this.readings = []
 		for (let i = 0; i < this.rays.length; i++) {
-			this.readings.push(this.#getReading(this.rays[i].roadBorders))
+			this.readings.push(this.#getReading(this.rays[i], roadBorders))
 		}
 	}
 
@@ -30,6 +30,14 @@ class Sensor {
 			if (touch) {
 				touches.push(touch)
 			}
+		}
+
+		if (touches.length === 0) {
+			return null
+		} else {
+			const offsets = touches.map(e => e.offset)
+			const minOffset = Math.min(...offsets)
+			return touches.find(e => e.offset === minOffset)
 		}
 	}
 
